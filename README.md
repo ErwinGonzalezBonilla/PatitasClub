@@ -1,81 +1,90 @@
-# WebApp boilerplate with React JS and Flask API
+WebApp Full Stack – React + Flask + MySQL
+Descripción del Proyecto
 
-Build web applications using React.js for the front end and python/flask for your backend API.
+Este proyecto es una aplicación web full stack desarrollada para ofrecer una plataforma de ventas online con gestión de productos, pagos y usuarios. El frontend fue construido con React.js, HTML, CSS y Bootstrap, mientras que el backend utiliza Python con Flask para construir una API REST que gestiona productos, usuarios y transacciones.
 
-- Documentation can be found here: https://4geeks.com/docs/start/react-flask-template
-- Here is a video on [how to use this template](https://www.loom.com/share/f37c6838b3f1496c95111e515e83dd9b)
-- Integrated with Pipenv for package managing.
-- Fast deployment to Render [in just a few steps here](https://4geeks.com/docs/start/deploy-to-render-com).
-- Use of .env file.
-- SQLAlchemy integration for database abstraction.
+El proyecto incluye integración con JWT para autenticación segura de usuarios y Stripe para procesamiento de pagos online, ofreciendo un flujo seguro y profesional para comercio electrónico.
 
-### 1) Installation:
+El proyecto se ejecuta dentro de un entorno virtual usando Pipenv y está conectado a una base de datos MySQL, asegurando persistencia, escalabilidad y control de la información.
 
-> If you use Github Codespaces (recommended) or Gitpod this template will already come with Python, Node and the Posgres Database installed. If you are working locally make sure to install Python 3.10, Node 
+Tecnologías Utilizadas
 
-It is recomended to install the backend first, make sure you have Python 3.10, Pipenv and a database engine (Posgress recomended)
+Frontend: React.js, HTML5, CSS3, Bootstrap 5
 
-1. Install the python packages: `$ pipenv install`
-2. Create a .env file based on the .env.example: `$ cp .env.example .env`
-3. Install your database engine and create your database, depending on your database you have to create a DATABASE_URL variable with one of the possible values, make sure you replace the valudes with your database information:
+Backend: Python, Flask, API REST
 
-| Engine    | DATABASE_URL                                        |
-| --------- | --------------------------------------------------- |
-| SQLite    | sqlite:////test.db                                  |
-| MySQL     | mysql://username:password@localhost:port/example    |
-| Postgress | postgres://username:password@localhost:5432/example |
+Autenticación: JSON Web Tokens (JWT)
 
-4. Migrate the migrations: `$ pipenv run migrate` (skip if you have not made changes to the models on the `./src/api/models.py`)
-5. Run the migrations: `$ pipenv run upgrade`
-6. Run the application: `$ pipenv run start`
+Procesamiento de pagos: Stripe API
 
-> Note: Codespaces users can connect to psql by typing: `psql -h localhost -U gitpod example`
+Base de datos: MySQL
 
-### Undo a migration
+Gestión de dependencias: Pipenv (entorno virtual)
 
-You are also able to undo a migration by running
+Integración y despliegue: Configuración lista para Render o Heroku
 
-```sh
-$ pipenv run downgrade
-```
+Funcionalidades Principales
 
-### Backend Populate Table Users
+Gestión de Productos: API REST que permite listar, crear, editar y eliminar productos.
 
-To insert test users in the database execute the following command:
+Usuarios y Seguridad: Registro, login y autenticación mediante JWT.
 
-```sh
-$ flask insert-test-users 5
-```
+Carrito y Pagos: Procesamiento seguro de pagos con Stripe.
 
-And you will see the following message:
+Frontend Responsivo: Interfaces construidas con React y Bootstrap, adaptadas a dispositivos móviles y escritorio.
 
-```
-  Creating test users
-  test_user1@test.com created.
-  test_user2@test.com created.
-  test_user3@test.com created.
-  test_user4@test.com created.
-  test_user5@test.com created.
-  Users created successfully!
-```
+Gestión de Base de Datos: MySQL como motor principal, conectada mediante SQLAlchemy para abstracción y manejo eficiente de modelos.
 
-### **Important note for the database and the data inside it**
+Instalación y Ejecución
 
-Every Github codespace environment will have **its own database**, so if you're working with more people eveyone will have a different database and different records inside it. This data **will be lost**, so don't spend too much time manually creating records for testing, instead, you can automate adding records to your database by editing ```commands.py``` file inside ```/src/api``` folder. Edit line 32 function ```insert_test_data``` to insert the data according to your model (use the function ```insert_test_users``` above as an example). Then, all you need to do is run ```pipenv run insert-test-data```.
+Clonar el repositorio:
 
-### Front-End Manual Installation:
+git clone <REPO_URL>
+cd <PROJECT_FOLDER>
 
--   Make sure you are using node version 20 and that you have already successfully installed and runned the backend.
+Configurar entorno virtual con Pipenv e instalar dependencias:
 
-1. Install the packages: `$ npm install`
-2. Start coding! start the webpack dev server `$ npm run start`
+pipenv install
+pipenv shell
 
-## Publish your website!
+Crear archivo .env basado en .env.example y configurar las variables de entorno, incluyendo DATABASE_URL y claves de Stripe.
 
-This boilerplate it's 100% read to deploy with Render.com and Heroku in a matter of minutes. Please read the [official documentation about it](https://4geeks.com/docs/start/deploy-to-render-com).
+Ejecutar migraciones y poblar base de datos si es necesario:
 
-### Contributors
+pipenv run migrate
+pipenv run upgrade
+pipenv run insert-test-data
 
-This template was built as part of the 4Geeks Academy [Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and many other contributors. Find out more about our [Full Stack Developer Course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), and [Data Science Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning).
+Iniciar el backend:
 
-You can find other templates and resources like this at the [school github page](https://github.com/4geeksacademy/).
+pipenv run start
+
+Instalar dependencias del frontend y ejecutar la aplicación:
+
+cd client
+npm install
+npm run start
+Estructura del Proyecto
+/src
+ ├─ /api           # Flask API REST
+ │    ├─ models.py # Modelos de base de datos
+ │    ├─ routes.py # Endpoints de productos y usuarios
+ │    └─ commands.py # Scripts de prueba y migraciones
+ ├─ /client        # Frontend en React
+ │    ├─ public
+ │    └─ src
+ │         ├─ components
+ │         ├─ pages
+ │         └─ services # Comunicación con API y Stripe
+ └─ .env.example   # Variables de entorno de ejemplo
+Consideraciones
+
+Cada entorno de desarrollo puede tener su propia base de datos; se recomienda usar scripts automatizados para poblar datos de prueba.
+
+El proyecto está listo para despliegue rápido en Render.com o Heroku, con configuración mínima.
+
+Stripe permite pagos seguros en entornos de prueba y producción.
+
+Autores
+
+Proyecto desarrollado como parte del Bootcamp Full Stack 4Geeks Academy por Erwin González Bonilla y Rosbelys Pinto, Hannah Ia Assad, y >Guillermo MOrales.
