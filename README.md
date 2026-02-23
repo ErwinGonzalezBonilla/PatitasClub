@@ -61,22 +61,6 @@ pipenv run start
 
 Instalar dependencias del frontend y ejecutar la aplicación:
 
-cd client
-npm install
-npm run start
-Estructura del Proyecto
-/src
- ├─ /api           # Flask API REST
- │    ├─ models.py # Modelos de base de datos
- │    ├─ routes.py # Endpoints de productos y usuarios
- │    └─ commands.py # Scripts de prueba y migraciones
- ├─ /client        # Frontend en React
- │    ├─ public
- │    └─ src
- │         ├─ components
- │         ├─ pages
- │         └─ services # Comunicación con API y Stripe
- └─ .env.example   # Variables de entorno de ejemplo
 Consideraciones
 
 Cada entorno de desarrollo puede tener su propia base de datos; se recomienda usar scripts automatizados para poblar datos de prueba.
