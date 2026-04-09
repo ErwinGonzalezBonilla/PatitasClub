@@ -1,74 +1,62 @@
-WebApp Full Stack – React + Flask + MySQL
+ Full Stack – React + Flask + MySQL 🐱💻🐶
+ 🐾 Patitas Club 🐾
+Tu e-commerce favorito para consentir a tus mascotas 🐶🐱
 Descripción del Proyecto
 
-Este proyecto es una aplicación web full stack desarrollada para ofrecer una plataforma de ventas online con gestión de productos, pagos y usuarios. El frontend fue construido con React.js, HTML, CSS y Bootstrap, mientras que el backend utiliza Python con Flask para construir una API REST que gestiona productos, usuarios y transacciones.
+Esta aplicación web full stack está diseñada para ofrecer una plataforma de ventas online con gestión de productos, pagos y usuarios.
 
-El proyecto incluye integración con JWT para autenticación segura de usuarios y Stripe para procesamiento de pagos online, ofreciendo un flujo seguro y profesional para comercio electrónico.
+🖥️ Frontend: React.js, HTML, CSS y Bootstrap
+🐍 Backend: Python + Flask con API REST
+🔐 Seguridad: JWT para autenticación de usuarios
+💳 Pagos: Stripe para procesamiento seguro
 
-El proyecto se ejecuta dentro de un entorno virtual usando Pipenv y está conectado a una base de datos MySQL, asegurando persistencia, escalabilidad y control de la información.
+La app se ejecuta en un entorno virtual con Pipenv y utiliza MySQL como base de datos, asegurando persistencia, escalabilidad y control de la información.
 
-Tecnologías Utilizadas
-
-Frontend: React.js, HTML5, CSS3, Bootstrap 5
-
-Backend: Python, Flask, API REST
-
-Autenticación: JSON Web Tokens (JWT)
-
-Procesamiento de pagos: Stripe API
-
-Base de datos: MySQL
-
-Gestión de dependencias: Pipenv (entorno virtual)
-
-Integración y despliegue: Configuración lista para Render o Heroku
-
-Funcionalidades Principales
-
-Gestión de Productos: API REST que permite listar, crear, editar y eliminar productos.
-
-Usuarios y Seguridad: Registro, login y autenticación mediante JWT.
-
-Carrito y Pagos: Procesamiento seguro de pagos con Stripe.
-
-Frontend Responsivo: Interfaces construidas con React y Bootstrap, adaptadas a dispositivos móviles y escritorio.
-
-Gestión de Base de Datos: MySQL como motor principal, conectada mediante SQLAlchemy para abstracción y manejo eficiente de modelos.
-
-Instalación y Ejecución
-
+🛠 Tecnologías Utilizadas
+Área	Tecnologías
+🌐 Frontend	React.js, HTML5, CSS3, Bootstrap 5
+🐍 Backend	Python, Flask, API REST
+🔐 Autenticación	JSON Web Tokens (JWT)
+💳 Pagos	Stripe API
+🗄 Base de Datos	MySQL + SQLAlchemy
+📦 Gestión de dependencias	Pipenv
+🚀 Despliegue	Render / Heroku
+✨ Funcionalidades Principales
+🛒 Gestión de Productos: Crear, editar, eliminar y listar productos mediante API REST
+👤 Usuarios y Seguridad: Registro, login y autenticación con JWT
+💳 Carrito y Pagos: Integración segura con Stripe
+📱 Frontend Responsivo: Interfaces adaptadas a móviles y escritorio
+🗄 Gestión de Base de Datos: SQLAlchemy para abstracción y manejo eficiente de modelos
+⚡ Instalación y Ejecución
 Clonar el repositorio:
-
 git clone <REPO_URL>
 cd <PROJECT_FOLDER>
-
-Configurar entorno virtual con Pipenv e instalar dependencias:
-
+Configurar entorno virtual e instalar dependencias:
 pipenv install
 pipenv shell
-
-Crear archivo .env basado en .env.example y configurar las variables de entorno, incluyendo DATABASE_URL y claves de Stripe.
-
-Ejecutar migraciones y poblar base de datos si es necesario:
-
+Configurar variables de entorno:
+Crear archivo .env basado en .env.example
+Configurar DATABASE_URL y claves de Stripe
+Ejecutar migraciones y poblar base de datos (opcional):
 pipenv run migrate
 pipenv run upgrade
 pipenv run insert-test-data
-
 Iniciar el backend:
-
 pipenv run start
+Instalar dependencias del frontend y ejecutar la aplicación
+⚠ Consideraciones
+Cada entorno de desarrollo puede tener su propia base de datos 🗄️
+Listo para despliegue rápido en Render.com o Heroku 🚀
+Stripe permite pagos seguros en modo prueba y producción 💳
+👨‍💻 Autores
 
-Instalar dependencias del frontend y ejecutar la aplicación:
+Proyecto desarrollado como parte del Bootcamp Full Stack 4Geeks Academy:
 
-Consideraciones
+🐶 Erwin González Bonilla
+🐱 Rosbelys Pinto
+🐾 Hannah Ia Assad
+🐰 Guillermo Morales
+![PatitasClub](https://github.com/user-attachments/assets/6da98e10-4b76-45a7-b76b-3b467baa6d09)
 
-Cada entorno de desarrollo puede tener su propia base de datos; se recomienda usar scripts automatizados para poblar datos de prueba.
 
-El proyecto está listo para despliegue rápido en Render.com o Heroku, con configuración mínima.
 
-Stripe permite pagos seguros en entornos de prueba y producción.
-
-Autores
-
-Proyecto desarrollado como parte del Bootcamp Full Stack 4Geeks Academy por Erwin González Bonilla y Rosbelys Pinto, Hannah Ia Assad, y >Guillermo MOrales.
