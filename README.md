@@ -56,7 +56,9 @@ Proyecto desarrollado como parte del Bootcamp Full Stack 4Geeks Academy:
 🐱 Rosbelys Pinto
 🐾 Hannah Ia Assad
 🐰 Guillermo Morales
-![PatitasClub](https://github.com/user-attachments/assets/6da98e10-4b76-45a7-b76b-3b467baa6d09)
+![PatitasClub]
+<img width="1536" height="1024" alt="PCHome" src="https://github.com/user-attachments/assets/5feb4d47-1c14-474f-8bbf-5d1f59bd38aa" />
+
 
 
 
